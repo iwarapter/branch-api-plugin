@@ -106,6 +106,7 @@ public class BranchNameContributorTest {
             env = new EnvVars();
             instance.buildEnvironmentFor(cr1, env, new LogTaskListener(LOGGER, Level.FINE));
             assertThat(env.keySet(), containsInAnyOrder(
+                    is("FOLDER_NAME"),
                     is("BRANCH_NAME"),
                     is("CHANGE_ID"),
                     is("CHANGE_TARGET"),
@@ -130,6 +131,7 @@ public class BranchNameContributorTest {
             env = new EnvVars();
             instance.buildEnvironmentFor(cr2, env, new LogTaskListener(LOGGER, Level.FINE));
             assertThat(env.keySet(), containsInAnyOrder(
+                    is("FOLDER_NAME"),
                     is("BRANCH_NAME"),
                     is("CHANGE_ID"),
                     is("CHANGE_TARGET"),
@@ -156,6 +158,7 @@ public class BranchNameContributorTest {
             env = new EnvVars();
             instance.buildEnvironmentFor(tag, env, new LogTaskListener(LOGGER, Level.FINE));
             assertThat(env.keySet(), containsInAnyOrder(
+                    is("FOLDER_NAME"),
                     is("BRANCH_NAME"),
                     is("TAG_NAME"),
                     is("TAG_TIMESTAMP"),
